@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#game {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+#balo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 120px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: grab;
+}
+
+#inventory {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.inventory-item {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.inventory-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.inventory-item span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 12px;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
+#randomBox {
+  width: 250px;
+  height: 200px;
+  margin: 200px auto;
+  background-image: url('assets/box.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#randomBox.shake {
+  animation: shake 0.5s ease;
+}
+
+/* Hiệu ứng lắc box */
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0); }
+}
+
+#randomBox.glow {
+  animation: glow 5s infinite ease-in-out;
+  border-radius: 10px; /* Bo góc để đẹp hơn */
+}
+
+/* Hiệu ứng phát sáng */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px #FF0000; }
+  25% { box-shadow: 0 0 25px #FFB600; }
+  50% { box-shadow: 0 0 20px #FBFF00; }
+  100% { box-shadow: 0 0 1000px #2FFF00; }
+  
+}
+
+#fruitImage {
+  animation: scaleUp 1.5s ease;
+}
+
+/* Hiệu ứng phóng to Fruit */
+@keyframes scaleUp {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+#randomResult {
+  margin: 200px auto;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+button.store {
+  background-color: #28a745;
+  color: white;
+}
+
+button.drop {
+  background-color: #DC3545;
+  color: white;
+}
+
+button.store:hover, button.drop:hover {
+  box-shadow: 0 0 10px white;
+  transition: box-shadow 0.3s ease;
+}

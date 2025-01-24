@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Blox Fruit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <!-- Balo -->
+    <div id="balo">
+      <h3>Balo</h3>
+      <div id="inventory" class="hide"></div>
+    </div>
+
+    <!-- Random Box -->
+    <div id="randomBox" onclick="openBox()">
+      <p id="boxText">TAP</p>
+    </div>
+
+    <!-- Random Result -->
+    <div id="randomResult" style="display: none;">
+      <img id="fruitImage" src="" alt="Fruit" style="width: 100px; height: 100px;">
+      <h3 id="fruitName">...</h3>
+      <button class="store" onclick="storeFruit()">Lưu trữ</button>
+      <button class="drop" onclick="dropFruit()">Thả</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
